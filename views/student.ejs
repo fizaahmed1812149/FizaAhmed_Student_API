@@ -9,27 +9,29 @@
       <h3><%= page %></h3><br>
       <div class="row">
         <div class="col-sm-4">
-         <% if(products.length>0) { %>
+         <% if(students.length>0) { %>
           <table>
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Price</th>
+                <th>Gender</th>
+                <th>City</th>
               </tr>
             </thead>
             <tbody>
-            <% for(var i=0;i<products.length;i++) {
+            <% for(var i=0;i<students.length;i++) {
               %>
               <tr>
-                <td><a href="/products/show/<%= products[i]._id%>"><%= products[i].product_name %> </a>
+                <td><a href="/students/show/<%= students[i]._id%>"><%= students[i].name %> </a>
                 </td>
-                <td><%=products[i].Price %></td>
+                <td><%=students[i].gender %></td>
+                <td><%=students[i].city %></td>
               </tr>
               <% } %>
             </tbody>
           </table>
   <% } else { %> 
-  <div>No Products found</div>   
+  <div>No Students found</div>   
   <%  
 } %>
         </div>

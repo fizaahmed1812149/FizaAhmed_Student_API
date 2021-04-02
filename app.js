@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 //moongoose db connection 
-mongoose.connect("mongodb://localhost/productsDb",{useNewUrlParser:true, useUnifiedTopology:true})
+mongoose.connect("mongodb://localhost/studentsDb",{useNewUrlParser:true, useUnifiedTopology:true})
 .then(()=>{
 console.log("Connected to the database");
 })
